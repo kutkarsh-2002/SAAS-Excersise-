@@ -1,4 +1,4 @@
-# SAAS-Excersise-
+# SASS-Exercise
 This repo contain the different features of the SASS like using variables, functions, map, mixins, inheritance etc.. that makes CSS the most powerful that is easy to use and implement in any complex project.
 
 In order to run a SAAS file in VS Code or any other code editor you need to install compiler that can run SASS and can covert a SASS file into normal CSS and CSS mapping file.
