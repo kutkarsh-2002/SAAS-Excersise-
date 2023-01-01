@@ -1,0 +1,98 @@
+//Declaring variables in SAAS
+// $color-primary: #0a79df;
+// $color-accent: #01cbc6;
+
+//Mapping in SAAS
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@1&family=IBM+Plex+Sans:ital@1&family=IBM+Plex+Serif:ital@1&family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap");
+$colors: (
+  primary: #4834df,
+  accent: #01cbc6,
+  font: #fff,
+  redhat: #f42424,
+);
+
+$sizes: (
+  fontone: 20px,
+  fontzero: 12px,
+  fonttwo: 20px,
+);
+
+//Declaring function in SAAS
+@function color($colorName) {
+  @return map-get($map: $colors, $key: $colorName);
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  .container {
+    clip-path: polygon(50% 0%, 100% 5%, 100% 75%, 50% 100%, 0 90%, 0 0);
+    background-color: color(primary);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+  }
+  header {
+    a {
+      color: color(font);
+      text-decoration: none;
+      font-size: 1.5rem;
+      text-align: center;
+      padding-top: 20px;
+      display: block;
+    }
+  }
+
+  main {
+    section#main-image {
+      background-color: color(accent);
+      padding: 20px;
+      margin: 1em auto;
+      width: 80%;
+      color: color(font);
+      border-radius: 15px;
+    }
+    p {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      margin-bottom: -15px;
+    }
+
+    section#main-button {
+      color: color(font);
+      padding: 15px;
+      text-align: center;
+
+      h1 {
+        font-size: 2em;
+        margin-top: 5px;
+        text-transform: uppercase;
+      }
+      p {
+        font-size: 1em;
+        margin-bottom: 5px;
+      }
+      button {
+        margin-top: 10px;
+        border-radius: 12px;
+        height: 3em;
+        width: 7em;
+        background-color: color((redhat));
+        &:hover {
+          background-color: color(accent);
+        }
+        a {
+          text-decoration: none;
+          font-size: 12px;
+          font-family: "IBM Plex Sans", sans-serif;
+        }
+      }
+    }
+  }
+}
